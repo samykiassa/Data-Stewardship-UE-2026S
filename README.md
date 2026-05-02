@@ -1,7 +1,6 @@
 # Data-Stewardship-UE-2026S
-# Repository File Organization
 
-## Directory Structure
+## File Organization
 ```text
 Data-Stewardship-UE-2026S/
 │
