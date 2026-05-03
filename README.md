@@ -1,4 +1,4 @@
-# Data-Stewardship-UE-2026S
+# Predicting Road Traffic Accident Severity: An Analysis of Environmental Factors and Spurious Correlations
 
 ## File Organization
 ```text
@@ -11,7 +11,11 @@ Data-Stewardship-UE-2026S/
 ├── src/                    # Source code and scripts for data processing
 │
 ├── outputs/                # Output files from scripts or analyses
-│
-├── .gitignore              # Specifies intentionally untracked files to ignore
-├── LICENSE                 # License defining how the project can be used
-└── README.md               # Main entry point and overview of the repository
+```
+### File Naming Conventions
+To ensure consistency, all files in this repository follow specific naming rules:
+*   **Input datasets (`data/`):** Format: `[YYYY-MM-DD]_[descriptive_name].[ext]`
+*   **Scripts (`src/`):** Format: `[XX]_[action]_[target].[ext]` (where XX is execution order)
+*   **Output files (`outputs/`):** Format: `[YYYY-MM-DD]_[figure_or_model_name]_v[version].[ext]`
+*   **Configuration files:** Format: `config_[environment_or_setup].yaml`
+---
