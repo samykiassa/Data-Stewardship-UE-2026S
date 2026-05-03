@@ -14,8 +14,8 @@ Data-Stewardship-UE-2026S/
 ```
 ### File Naming Conventions
 To ensure consistency, all files in this repository follow specific naming rules:
-*   **Input datasets (`data/`):** Format: `[YYYY-MM-DD]_[descriptive_name].[ext]`
-*   **Scripts (`src/`):** Format: `[XX]_[action]_[target].[ext]` (where XX is execution order)
-*   **Output files (`outputs/`):** Format: `[YYYY-MM-DD]_[figure_or_model_name]_v[version].[ext]`
-*   **Configuration files:** Format: `config_[environment_or_setup].yaml`
+*   **Input datasets (`data/`):** Format: `[YYYY].[ext]`
+*   **Documentation (`docs/`):** Format: `[Description].[ext]`
+*   **Scripts (`src/`):** Format: `[Job_Name].[ext]`
+*   **Output files (`outputs/`):** Format: `[Description].[ext]`
 ---
