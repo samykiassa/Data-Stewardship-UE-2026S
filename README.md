@@ -12,8 +12,8 @@ Data-Stewardship-UE-2026S/
 │
 ├── outputs/                # Output files from scripts or analyses
 ```
-### File Naming Convention
 
+## File Naming Convention
 To ensure consistency, all files in this repository follow specific naming rules:
 
 * **Input datasets (`data/`)**: Format: `[description]_[status]_[date].[ext]` 
