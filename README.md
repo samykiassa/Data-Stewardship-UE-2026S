@@ -12,10 +12,20 @@ Data-Stewardship-UE-2026S/
 │
 ├── outputs/                # Output files from scripts or analyses
 ```
-### File Naming Conventions
+### File Naming Convention
+
 To ensure consistency, all files in this repository follow specific naming rules:
-*   **Input datasets (`data/`):** Format: `[YYYY].[ext]`
-*   **Documentation (`docs/`):** Format: `[Description].[ext]`
-*   **Scripts (`src/`):** Format: `[Job_Name].[ext]`
-*   **Output files (`outputs/`):** Format: `[Description].[ext]`
+
+* **Input datasets (`data/`)**: Format: `[description]_[status]_[date].[ext]` 
+  * date must follow the format `YYYYMMDD` 
+  * The following status tags are allowed: 
+    * `raw`: raw dataset without cleaning
+    * `cleaned`: cleaned dataset
+  
+* **Documentation (`docs/`)**: Format: `[description]_[date].[ext]`  
+  * date must follow the format `YYYYMMDD`
+* **Scripts (`src/`)**: Format: `[job_name].[ext]`
+* **Output files (`outputs/`)**: Format: `[description]_[date].[ext]`  
+  * date must follow the format `YYYYMMDD`
+* **Configuration files**: Format: `[description].[ext]`
 ---
