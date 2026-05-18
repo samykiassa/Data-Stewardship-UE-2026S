@@ -24,7 +24,7 @@ CREATE TABLE lighting (
 );
 
 CREATE TABLE vehicle (
-    vehicle_type_id INT AUTO_INCREMENT PRIMARY KEY,
+    vehicle_id INT AUTO_INCREMENT PRIMARY KEY,
     description VARCHAR(255)
 );
 
@@ -86,7 +86,7 @@ CREATE TABLE accident_casualty (
 
     casualty_class_id INT,
     casualty_severity_id INT,
-    vehicle_type_id INT,
+    vehicle_id INT,
 
     PRIMARY KEY (reference_number, person_id),
 
@@ -94,5 +94,5 @@ CREATE TABLE accident_casualty (
     FOREIGN KEY (person_id) REFERENCES person(person_id),
     FOREIGN KEY (casualty_class_id) REFERENCES casualty_class(casualty_class_id),
     FOREIGN KEY (casualty_severity_id) REFERENCES casualty_severity(casualty_severity_id),
-    FOREIGN KEY (vehicle_type_id) REFERENCES vehicle(vehicle_type_id)
+    FOREIGN KEY (vehicle_id) REFERENCES vehicle(vehicle_id)
 );
