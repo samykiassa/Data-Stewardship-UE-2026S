@@ -1,0 +1,20 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "SoftwareApplication",
+  "name": "RandomForest Classifier for Accident Severity",
+  "applicationCategory": "Machine Learning Model",
+  "description": "RandomForestClassifier predicting 0 (Minor), 1 (Serious), 2 (Fatal) based on environmental factors and cheese consumption.",
+  "softwareRequirements": "scikit-learn==1.4.0",
+  "algorithm": "Random Forest Classifier",
+  "hyperparameters": {
+    "class_weight": "balanced",
+    "n_estimators": 50,
+    "random_state": 42
+  },
+  "evaluationMetrics": [
+    "Precision",
+    "Recall",
+    "F1-Score",
+    "Confusion Matrix"
+  ]
+}

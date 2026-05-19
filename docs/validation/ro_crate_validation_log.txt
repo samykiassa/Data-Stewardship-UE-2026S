@@ -1,0 +1,12 @@
+RO-Crate Validator Report
+-------------------------
+Target: ro-crate-metadata.json
+Conforms to: RO-Crate 1.1
+
+Results:
+[PASS] Root Data Entity exists
+[PASS] All referenced entities exist in @graph
+[PASS] Valid JSON-LD
+[PASS] Required fields are present
+
+Status: Valid RO-Crate.

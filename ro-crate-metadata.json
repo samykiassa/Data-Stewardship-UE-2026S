@@ -1,0 +1,39 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "@id": "ro-crate-metadata.json",
+      "conformsTo": {"@id": "https://w3id.org/ro/crate/1.1"},
+      "about": {"@id": "./"}
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "FAIR Data Science ML Pipeline",
+      "description": "A supervised Machine Learning pipeline that predicts road traffic accident severity.",
+      "hasPart": [
+        {"@id": "data/cheese_consumption_raw_20260519.csv"},
+        {"@id": "src/02_train_model.py"},
+        {"@id": "outputs/accident_severity_model.pkl"},
+        {"@id": "codemeta.json"},
+        {"@id": "croissant.json"}
+      ]
+    },
+    {
+      "@id": "data/cheese_consumption_raw_20260519.csv",
+      "@type": "File",
+      "description": "Spurious cheese consumption dataset"
+    },
+    {
+      "@id": "src/02_train_model.py",
+      "@type": "SoftwareSourceCode",
+      "description": "ML pipeline training script"
+    },
+    {
+      "@id": "outputs/accident_severity_model.pkl",
+      "@type": "File",
+      "description": "RandomForest classifier artifact"
+    }
+  ]
+}

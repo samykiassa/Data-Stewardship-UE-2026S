@@ -1,0 +1,39 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/"
+  },
+  "@type": "cr:Dataset",
+  "name": "Leeds Road Traffic Accidents and Cheese Consumption",
+  "description": "2009-2019 road traffic accidents dataset from Leeds City Council merged with per-capita cheese consumption for spurious correlation testing.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://github.com/samykiassa/Data-Stewardship-UE-2026S",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "cheese_data",
+      "contentUrl": "data/cheese_consumption_raw_20260519.csv",
+      "encodingFormat": "text/csv"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "cheese_records",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "Year",
+          "dataType": "Integer"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "Cheese_Consumption_lbs",
+          "dataType": "Float",
+          "cr:unit": "http://qudt.org/vocab/unit/LB"
+        }
+      ]
+    }
+  ]
+}

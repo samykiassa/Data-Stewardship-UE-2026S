@@ -86,3 +86,13 @@ It is useful for checking whether certain vehicle types are overrepresented in s
 Commented verification queries are included at the bottom of `src/create_views.sql`. They can be uncommented and run after the database tables are created, the data is loaded, and the views are created. These queries check row counts, preview the main ML feature table, and verify severity distributions.
 
 ---
+
+## Licensing
+This project explicitly assigns three separate licenses to different components to comply with FAIR guidelines:
+- **Input Data**: Licensed under the EU Open Data Portal terms (open reuse).
+- **Software / Source Code**: Licensed under the [MIT License](LICENSE).
+- **Output Data (Models & Figures)**: Licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+## Citation / DOI
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+*(Note: A GitHub release will trigger Zenodo to mint the final DOI.)*
