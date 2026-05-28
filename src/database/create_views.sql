@@ -19,7 +19,7 @@ SELECT
     p.age,
     s.description AS sex,
 
-    v.description AS vehicle_type,
+    v.description AS vehicle,
     cc.description AS casualty_class,
     cs.description AS casualty_severity
 
@@ -41,7 +41,7 @@ LEFT JOIN weather w
 LEFT JOIN sex s
     ON p.sex_id = s.sex_id
 LEFT JOIN vehicle v
-    ON ac.vehicle_type_id = v.vehicle_type_id
+    ON ac.vehicle_id = v.vehicle_id
 LEFT JOIN casualty_class cc
     ON ac.casualty_class_id = cc.casualty_class_id
 LEFT JOIN casualty_severity cs
@@ -102,7 +102,7 @@ SELECT
 
     p.age,
     s.description AS sex,
-    v.description AS vehicle_type,
+    v.description AS vehicle,
     cc.description AS casualty_class,
 
     cs.description AS original_casualty_severity,
@@ -132,7 +132,7 @@ LEFT JOIN weather w
 LEFT JOIN sex s
     ON p.sex_id = s.sex_id
 LEFT JOIN vehicle v
-    ON ac.vehicle_type_id = v.vehicle_type_id
+    ON ac.vehicle_id = v.vehicle_id
 LEFT JOIN casualty_class cc
     ON ac.casualty_class_id = cc.casualty_class_id
 LEFT JOIN casualty_severity cs
@@ -198,14 +198,14 @@ GROUP BY
 
 -- View 7: Severity count by vehicle type
 
-CREATE OR REPLACE VIEW vw_severity_by_vehicle_type AS
+CREATE OR REPLACE VIEW vw_severity_by_vehicle AS
 SELECT
-    v.description AS vehicle_type,
+    v.description AS vehicle,
     cs.description AS casualty_severity,
     COUNT(*) AS casualty_count
 FROM accident_casualty ac
 LEFT JOIN vehicle v
-    ON ac.vehicle_type_id = v.vehicle_type_id
+    ON ac.vehicle_id = v.vehicle_id
 LEFT JOIN casualty_severity cs
     ON ac.casualty_severity_id = cs.casualty_severity_id
 GROUP BY
@@ -233,8 +233,8 @@ GROUP BY
 -- SELECT COUNT(*) AS rows_road_surface_summary
 -- FROM vw_severity_by_road_surface;
 
--- SELECT COUNT(*) AS rows_vehicle_type_summary
--- FROM vw_severity_by_vehicle_type;
+-- SELECT COUNT(*) AS rows_vehicle_summary
+-- FROM vw_severity_by_vehicle;
 
 
 -- Preview main ML feature table
