@@ -31,7 +31,7 @@ To ensure consistency, all files in this repository follow specific naming rules
 
 ## DBRepo SQL Views
 
-The SQL view definitions are stored in `src/database/create_views.sql`.
+The SQL view definitions are stored in `src/database/mysql_create_views.sql`.
 The DBRepo views were created and verified using the notebook `src/database/dbrepo_views_create.ipynb`.
 The DBRepo API-based loading workflow is implemented in `src/database/dbrepo_api_reimplementation.ipynb`.
 
@@ -88,7 +88,7 @@ It is useful for checking whether certain vehicle categories are overrepresented
 
 All seven required DBRepo views were created and verified successfully in DBRepo. The verification output confirms that each required view exists in DBRepo and has a DBRepo view identifier.
 
-Commented verification queries are included at the bottom of `src/database/create_views.sql`. They can be uncommented and run after the database tables are created, the data is loaded, and the views are created. These queries check row counts, preview the main ML feature table, and verify severity distributions.
+Commented verification queries are included at the bottom of `src/database/mysql_create_views.sql`. They can be uncommented and run after the database tables are created, the data is loaded, and the views are created. These queries check row counts, preview the main ML feature table, and verify severity distributions.
 
 ## DBRepo API-based data loading
 
