@@ -194,3 +194,10 @@ This confirms that the final experiment pipeline no longer depends on local CSV 
 Croissant metadata for the input dataset is available at `docs/metadata/croissant_input_dataset.json`. It describes the DBRepo-accessed accident severity input dataset, including fields, data types, distribution information, licence, and semantic unit mappings.
 
 ---
+
+## RO-Crate
+This repository is packaged as an RO-Crate 1.1 compliant research object. 
+The metadata is available in [`ro-crate-metadata.json`](ro-crate-metadata.json).
+Validation output is available under [`docs/validation/ro-crate-validation.txt`](docs/validation/ro-crate-validation.txt).
+
+RO-crate compatibility tested via the following command: rocrate-validator validate . > docs\validation\ro-crate-validation.txt

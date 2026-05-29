@@ -1,0 +1,415 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+
+    {
+      "@type": "CreativeWork",
+      "@id": "ro-crate-metadata.json",
+      "conformsTo": {"@id": "https://w3id.org/ro/crate/1.1"},
+      "about": {"@id": "./"}
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "./",
+      "name": "Prediction of accident severity using road traffic accident data",
+      "description": "Experiment package for predicting road traffic accident severity from environmental conditions using a supervised Random Forest model. Input data is sourced from the EU open data portal (Leeds City Council road traffic accidents), retrieved exclusively from the TU Wien DBRepo REST API. The pipeline categorizes severity into Minor (0), Serious (1), and Fatal (2). Individual components carry their own licences: input data is under OGL v3.0, code under MIT, and generated outputs under CC BY 4.0.",
+      "datePublished": "2026-05-29",
+      "license": {"@id": "https://creativecommons.org/licenses/by/4.0/"},
+      "author": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "publisher": {"@id": "https://www.tuwien.at/"},
+      "hasPart": [
+        {"@id": "dbrepo_api_reimplementation.ipynb"},
+        {"@id": "docs/metadata/model_card_20260529.md"},
+        {"@id": "#input-dataset"},
+        {"@id": "#dataset-accident"},
+        {"@id": "#dataset-person"},
+        {"@id": "#dataset-accident_casualty"},
+        {"@id": "#dataset-road_surface"},
+        {"@id": "#dataset-lighting"},
+        {"@id": "#dataset-weather"},
+        {"@id": "#dataset-sex"},
+        {"@id": "#dataset-casualty_severity"},
+        {"@id": "#dataset-vehicle"},
+        {"@id": "outputs/accident_severity_model_29052026.joblib"},
+        {"@id": "outputs/test_predictions_29052026.csv"},
+        {"@id": "outputs/histogram_feature_dist_29052026.png"},
+        {"@id": "outputs/confusion_matrix_29052026.png"},
+        {"@id": "outputs/performance_comparison_chart_29052026.png"},
+        {"@id": "docs/validation/ro-crate-validation.txt"}
+      ]
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0001-7256-5903",
+      "name": "Adigun Oladapo Oludele",
+      "affiliation": {"@id": "https://www.tuwien.at/"}
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0003-2580-979X",
+      "name": "Kiassa Samy",
+      "affiliation": {"@id": "https://www.tuwien.at/"}
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0004-8744-9106",
+      "name": "Sodhi Muskan",
+      "affiliation": {"@id": "https://www.tuwien.at/"}
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0009-4474-1576",
+      "name": "Katoch Nea",
+      "affiliation": {"@id": "https://www.tuwien.at/"}
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.tuwien.at/",
+      "name": "TU Wien (Technische Universität Wien)",
+      "url": "https://www.tuwien.at/"
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "#leeds-city-council",
+      "name": "Leeds City Council",
+      "url": "https://www.leeds.gov.uk/"
+    },
+
+    {
+      "@type": "CreativeWork",
+      "@id": "https://creativecommons.org/licenses/by/4.0/",
+      "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "identifier": "CC-BY-4.0"
+    },
+
+    {
+      "@type": "CreativeWork",
+      "@id": "https://opensource.org/licenses/MIT",
+      "name": "MIT Licence",
+      "identifier": "MIT"
+    },
+
+    {
+      "@type": "CreativeWork",
+      "@id": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "name": "Open Government Licence v3.0 (OGL v3.0)"
+    },
+
+    {
+      "@type": "DataDownload",
+      "@id": "#dbrepo-distribution",
+      "contentUrl": "https://test.dbrepo.tuwien.ac.at/api/v1/database/b23492bd-f66d-4663-a1f5-f296767dbbdc",
+      "encodingFormat": "application/json"
+    },
+
+    {
+      "@type": "DataDownload",
+      "@id": "#eu-portal-distribution",
+      "contentUrl": "https://data.europa.eu/data/datasets/road-traffic-accidents?locale=en",
+      "encodingFormat": "text/csv"
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "#input-dataset",
+      "name": "Road Traffic Accidents - Leeds City Council",
+      "description": "Original source dataset of road traffic accident records from Leeds, published by Leeds City Council. Retrieved via the EU Open Data Portal.",
+      "creator": {"@id": "#leeds-city-council"},
+      "publisher": {"@id": "#leeds-city-council"},
+      "license": {"@id": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"},
+      "url": "https://data.europa.eu/data/datasets/road-traffic-accidents?locale=en",
+      "distribution": {"@id": "#eu-portal-distribution"}
+    },
+
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "dbrepo_api_reimplementation.ipynb",
+      "name": "DBRepo API Reimplementation Notebook",
+      "description": "Jupyter notebook loading all data from the TU Wien DBRepo REST API, reconstructs the ML feature table, trains a Random Forest classifier and saves all evaluation artefacts.",
+      "programmingLanguage": {"@id": "#python3"},
+      "encodingFormat": "application/x-ipynb+json",
+      "author": [
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"}
+      ],
+      "license": {"@id": "https://opensource.org/licenses/MIT"},
+      "input": [
+        {"@id": "#dataset-accident"},
+        {"@id": "#dataset-person"},
+        {"@id": "#dataset-accident_casualty"},
+        {"@id": "#dataset-road_surface"},
+        {"@id": "#dataset-lighting"},
+        {"@id": "#dataset-weather"},
+        {"@id": "#dataset-sex"},
+        {"@id": "#dataset-casualty_severity"},
+        {"@id": "#dataset-vehicle"}
+      ],
+      "output": [
+        {"@id": "outputs/accident_severity_model_29052026.joblib"},
+        {"@id": "outputs/test_predictions_29052026.csv"},
+        {"@id": "outputs/histogram_feature_dist_29052026.png"},
+        {"@id": "outputs/confusion_matrix_29052026.png"},
+        {"@id": "outputs/performance_comparison_chart_29052026.png"}
+      ]
+    },
+
+    {
+      "@type": "ComputerLanguage",
+      "@id": "#python3",
+      "name": "Python 3",
+      "url": "https://www.python.org/"
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "#dataset-accident",
+      "name": "accident",
+      "description": "Table storing general information about road traffic accidents.",
+      "publisher": {"@id": "#leeds-city-council"},
+      "license": {"@id": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"},
+      "isPartOf": {"@id": "#input-dataset"},
+      "contributor": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "distribution": {"@id": "#dbrepo-distribution"}
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "#dataset-person",
+      "name": "person",
+      "description": "Table storing information about individuals involved in an accident.",
+      "publisher": {"@id": "#leeds-city-council"},
+      "license": {"@id": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"},
+      "isPartOf": {"@id": "#input-dataset"},
+      "contributor": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "distribution": {"@id": "#dbrepo-distribution"}
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "#dataset-accident_casualty",
+      "name": "accident_casualty",
+      "description": "Table linking persons to accidents and storing casualty details.",
+      "publisher": {"@id": "#leeds-city-council"},
+      "license": {"@id": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"},
+      "isPartOf": {"@id": "#input-dataset"},
+      "contributor": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "distribution": {"@id": "#dbrepo-distribution"}
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "#dataset-road_surface",
+      "name": "road_surface",
+      "description": "Lookup table storing all possible road surface conditions at the time of an accident.",
+      "publisher": {"@id": "#leeds-city-council"},
+      "license": {"@id": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"},
+      "isPartOf": {"@id": "#input-dataset"},
+      "contributor": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "distribution": {"@id": "#dbrepo-distribution"}
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "#dataset-lighting",
+      "name": "lighting",
+      "description": "Lookup table storing all possible lighting conditions at the time of an accident.",
+      "publisher": {"@id": "#leeds-city-council"},
+      "license": {"@id": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"},
+      "isPartOf": {"@id": "#input-dataset"},
+      "contributor": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "distribution": {"@id": "#dbrepo-distribution"}
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "#dataset-weather",
+      "name": "weather",
+      "description": "Lookup table storing all possible weather conditions at the time of an accident.",
+      "publisher": {"@id": "#leeds-city-council"},
+      "license": {"@id": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"},
+      "isPartOf": {"@id": "#input-dataset"},
+      "contributor": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "distribution": {"@id": "#dbrepo-distribution"}
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "#dataset-sex",
+      "name": "sex",
+      "description": "Lookup table storing all possible sex classifications of casualties.",
+      "publisher": {"@id": "#leeds-city-council"},
+      "license": {"@id": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"},
+      "isPartOf": {"@id": "#input-dataset"},
+      "contributor": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "distribution": {"@id": "#dbrepo-distribution"}
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "#dataset-casualty_severity",
+      "name": "casualty_severity",
+      "description": "Lookup table storing all possible injury severity levels (Slight, Serious, Fatal).",
+      "publisher": {"@id": "#leeds-city-council"},
+      "license": {"@id": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"},
+      "isPartOf": {"@id": "#input-dataset"},
+      "contributor": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "distribution": {"@id": "#dbrepo-distribution"}
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "#dataset-vehicle",
+      "name": "vehicle",
+      "description": "Lookup table storing all possible vehicle types involved in an accident.",
+      "publisher": {"@id": "#leeds-city-council"},
+      "license": {"@id": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"},
+      "isPartOf": {"@id": "#input-dataset"},
+      "contributor": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "distribution": {"@id": "#dbrepo-distribution"}
+    },
+
+    {
+      "@type": ["File", "SoftwareApplication"],
+      "@id": "outputs/accident_severity_model_29052026.joblib",
+      "name": "Trained Random Forest Model",
+      "description": "Serialised scikit-learn RandomForestClassifier (n_estimators=50, class_weight='balanced', random_state=42) trained to predict road-accident casualty severity (Slight=0, Serious=1, Fatal=2) from weather, road_surface, lighting, sex, vehicle type, and age features.",
+      "encodingFormat": "application/octet-stream",
+      "identifier": "TODO",
+      "author": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "license": {"@id": "https://creativecommons.org/licenses/by/4.0/"},
+      "mentions": {"@id": "docs/metadata/model_card_20260529.md"},
+      "isBasedOn": {"@id": "#input-dataset"}
+    },
+
+    {
+      "@type": ["File", "Dataset"],
+      "@id": "outputs/test_predictions_29052026.csv",
+      "name": "Test Set Predictions (CSV)",
+      "description": "The file contains the one-hot encoded feature columns, the actual severity class, and the predicted severity class.",
+      "encodingFormat": "text/csv",
+      "identifier": "TODO",
+      "author": [
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"}
+      ],
+      "license": {"@id": "https://creativecommons.org/licenses/by/4.0/"}
+    },
+
+    {
+      "@type": ["File", "ImageObject"],
+      "@id": "outputs/histogram_feature_dist_29052026.png",
+      "name": "Age Distribution by Severity Histogram",
+      "description": "Histogram showing the distribution of casualty age across the three severity classes.",
+      "encodingFormat": "image/png",
+      "author": [
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"}
+      ],
+      "license": {"@id": "https://creativecommons.org/licenses/by/4.0/"}
+    },
+
+    {
+      "@type": ["File", "ImageObject"],
+      "@id": "outputs/confusion_matrix_29052026.png",
+      "name": "Confusion Matrix on Test Set",
+      "description": "Confusion matrix comparing actual vs. predicted severity classes.",
+      "encodingFormat": "image/png",
+      "author": [
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"}
+      ],
+      "license": {"@id": "https://creativecommons.org/licenses/by/4.0/"}
+    },
+
+    {
+      "@type": ["File", "ImageObject"],
+      "@id": "outputs/performance_comparison_chart_29052026.png",
+      "name": "Top-5 Feature Importances Bar Chart",
+      "description": "Horizontal bar chart of the top 5 features from the trained Random Forest.",
+      "encodingFormat": "image/png",
+      "author": [
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"}
+      ],
+      "license": {"@id": "https://creativecommons.org/licenses/by/4.0/"}
+    },
+
+    {
+      "@type": "File",
+      "@id": "docs/metadata/model_card_20260529.md",
+      "name": "Model Card for Accident Severity Prediction",
+      "description": "Model card describing the trained Random Forest classifier.",
+      "encodingFormat": "text/markdown",
+      "author": {"@id": "https://orcid.org/0009-0009-4474-1576"},
+      "about": {"@id": "outputs/accident_severity_model_29052026.joblib"}
+    },
+
+    {
+      "@type": "File",
+      "@id": "docs/validation/ro-crate-validation.txt",
+      "name": "RO-Crate Validation Output",
+      "description": "Terminal output of ro-crate-validator run against this package.",
+      "encodingFormat": "text/plain"
+    }
+
+  ]
+}
