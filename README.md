@@ -191,5 +191,6 @@ The working API implementation successfully loaded the normalized DBRepo tables 
 
 This confirms that the final experiment pipeline no longer depends on local CSV input files. 
 
+Croissant metadata for the input dataset is available at `docs/metadata/croissant_input_dataset.json`. It describes the DBRepo-accessed accident severity input dataset, including fields, data types, distribution information, licence, and semantic unit mappings.
 
 ---
