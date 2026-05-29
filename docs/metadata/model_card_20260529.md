@@ -35,8 +35,7 @@ and stored at `outputs/accident_severity_model.joblib`.
 
 - **Developed by:** Adigun Oladapo Oludele ([0009-0001-7256-5903](https://orcid.org/0009-0001-7256-5903)), Kiassa
   Samy ([0000-0003-2580-979X](https://orcid.org/0000-0003-2580-979X)), Sodhi
-  Muskan ([0009-0004-8744-9106](https://orcid.org/0009-0004-8744-9106)), Nea
-  Katoch ([0009-0009-4474-1576](https://orcid.org/0009-0009-4474-1576))
+  Muskan ([0009-0004-8744-9106](https://orcid.org/0009-0004-8744-9106)), Katoch Nea ([0009-0009-4474-1576](https://orcid.org/0009-0009-4474-1576))
 - **Model type:** Random Forest Classifier (tabular, supervised)
 - **Language(s):** en
 - **License:** MIT
@@ -148,4 +147,4 @@ class.
 
 ## Model Card Authors
 
-Nea Katoch ([0009-0009-4474-1576](https://orcid.org/0009-0009-4474-1576))
+Katoch Nea ([0009-0009-4474-1576](https://orcid.org/0009-0009-4474-1576))
