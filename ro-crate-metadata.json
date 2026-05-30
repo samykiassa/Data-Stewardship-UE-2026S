@@ -43,7 +43,8 @@
         {"@id": "outputs/performance_comparison_chart_29052026.png"},
         {"@id": "docs/validation/ro-crate-validation.txt"},
         {"@id": "https://doi.org/10.70124/thw4c-36p53"},
-        {"@id": "https://doi.org/10.70124/cmx24-bwv40"}
+        {"@id": "https://doi.org/10.70124/cmx24-bwv40"},
+        {"@id": "docs/metadata/fair4ml_model_metadata_20260529.yaml"}
       ]
     },
 
@@ -337,7 +338,10 @@
         {"@id": "https://orcid.org/0009-0009-4474-1576"}
       ],
       "license": {"@id": "https://creativecommons.org/licenses/by/4.0/"},
-      "mentions": {"@id": "docs/metadata/model_card_20260529.md"},
+      "mentions": [
+        {"@id": "docs/metadata/model_card_20260529.md"},
+        {"@id": "docs/metadata/fair4ml_model_metadata_20260529.yaml"}
+      ],
       "isBasedOn": {"@id": "#input-dataset"}
     },
 
@@ -409,6 +413,16 @@
       "name": "RO-Crate Validation Output",
       "description": "Terminal output of ro-crate-validator run against this package.",
       "encodingFormat": "text/plain"
+    },
+
+    {
+      "@type": "File",
+      "@id": "docs/metadata/fair4ml_model_metadata_20260529.yaml",
+      "name": "FAIR4ML Metadata for Accident Severity Model",
+      "description": "FAIR4ML-compliant metadata describing the trained Random Forest classifier.",
+      "encodingFormat": "application/yaml",
+      "author": {"@id": "https://orcid.org/0000-0003-2580-979X"},
+      "about": {"@id": "outputs/accident_severity_model_29052026.joblib"}
     },
 
     {
