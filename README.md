@@ -98,7 +98,6 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-If `requirements.txt` is updated, all dependencies should remain version-pinned to support reproducibility.
 
 ---
 
