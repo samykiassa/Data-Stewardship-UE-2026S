@@ -24,7 +24,7 @@
       ],
       "publisher": {"@id": "https://www.tuwien.at/"},
       "hasPart": [
-        {"@id": "dbrepo_api_reimplementation.ipynb"},
+        {"@id": "src/database/dbrepo_api_reimplementation.ipynb"},
         {"@id": "docs/metadata/model_card_20260529.md"},
         {"@id": "#input-dataset"},
         {"@id": "#dataset-accident"},
@@ -135,7 +135,7 @@
 
     {
       "@type": "SoftwareSourceCode",
-      "@id": "dbrepo_api_reimplementation.ipynb",
+      "@id": "src/database/dbrepo_api_reimplementation.ipynb",
       "name": "DBRepo API Reimplementation Notebook",
       "description": "Jupyter notebook loading all data from the TU Wien DBRepo REST API, reconstructs the ML feature table, trains a Random Forest classifier and saves all evaluation artefacts.",
       "programmingLanguage": {"@id": "#python3"},
@@ -460,7 +460,8 @@
         {"@id": "https://orcid.org/0009-0009-4474-1576"}
       ],
       "hasPart": [
-        {"@id": "outputs/accident_severity_model_29052026.joblib"}
+        {"@id": "outputs/accident_severity_model_29052026.joblib"},
+        {"@id": "docs/metadata/fair4ml_model_metadata_20260529.yaml"}
       ]
     }
 
