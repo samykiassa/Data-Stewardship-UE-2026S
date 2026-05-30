@@ -328,7 +328,7 @@
       "name": "Trained Random Forest Model",
       "description": "Serialised scikit-learn RandomForestClassifier (n_estimators=50, class_weight='balanced', random_state=42) trained to predict road-accident casualty severity (Slight=0, Serious=1, Fatal=2) from weather, road_surface, lighting, sex, vehicle type, and age features.",
       "encodingFormat": "application/octet-stream",
-      "identifier": "TODO",
+      "identifier": "10.70124/thw4c-36p53",
       "author": [
         {"@id": "https://orcid.org/0009-0001-7256-5903"},
         {"@id": "https://orcid.org/0000-0003-2580-979X"},
