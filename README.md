@@ -381,13 +381,35 @@ The working API implementation successfully loaded the normalized DBRepo tables 
 
 ### Croissant Metadata
 
-Croissant metadata for the input dataset is available at `docs/metadata/croissant_input_dataset.json`. It describes the DBRepo-accessed accident severity input dataset, including fields, data types, distribution information, licence, and semantic unit mappings.
+Croissant metadata for the input dataset is available at `docs/metadata/road_traffic_accident_croissant_20260529.json`. It describes the DBRepo-accessed accident severity input dataset, including fields, data types, distribution information, licence, and semantic unit mappings.
 
 ### RO-Crate
 
 This repository is packaged as an RO-Crate 1.1 compliant research object.
 The metadata is available in [`ro-crate-metadata.json`](ro-crate-metadata.json).
 Validation output is available under [`docs/validation/ro-crate-validation.txt`](docs/validation/ro-crate-validation.txt).
+
+### FAIR4ML Metadata
+
+FAIR4ML metadata for the trained Random Forest model is available at `docs/metadata/fair4ml_model_metadata_20260529.yaml`.
+
+The metadata describes the training dataset DOI, algorithm name and version, hyperparameters, evaluation metrics, intended use, known limitations, and the related model card. The same FAIR4ML metadata file is uploaded alongside the trained model in the TUWRD model deposit.
+
+### Model Card
+
+The Model Card for the trained accident severity prediction model is available at `docs/metadata/model_card_20260529.md`.
+
+It describes the model, intended use, out-of-scope uses, training data, evaluation results, limitations, ethical considerations, and licence.
+
+## TUWRD Deposits
+
+The trained model artefact is deposited in the TU Wien Research Data Repository test instance.
+
+- Model deposit DOI: `10.70124/thw4c-36p53`
+
+The generated output data, including predictions, confusion matrix, feature distribution histogram, and performance/feature-importance chart, is deposited separately.
+
+- Generated output data DOI: `10.70124/cmx24-bwv40`
 
 ---
 
