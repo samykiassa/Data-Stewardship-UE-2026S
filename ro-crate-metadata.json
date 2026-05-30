@@ -41,7 +41,9 @@
         {"@id": "outputs/histogram_feature_dist_29052026.png"},
         {"@id": "outputs/confusion_matrix_29052026.png"},
         {"@id": "outputs/performance_comparison_chart_29052026.png"},
-        {"@id": "docs/validation/ro-crate-validation.txt"}
+        {"@id": "docs/validation/ro-crate-validation.txt"},
+        {"@id": "https://doi.org/10.70124/thw4c-36p53"},
+        {"@id": "https://doi.org/10.70124/cmx24-bwv40"}
       ]
     },
 
@@ -328,7 +330,6 @@
       "name": "Trained Random Forest Model",
       "description": "Serialised scikit-learn RandomForestClassifier (n_estimators=50, class_weight='balanced', random_state=42) trained to predict road-accident casualty severity (Slight=0, Serious=1, Fatal=2) from weather, road_surface, lighting, sex, vehicle type, and age features.",
       "encodingFormat": "application/octet-stream",
-      "identifier": "10.70124/thw4c-36p53",
       "author": [
         {"@id": "https://orcid.org/0009-0001-7256-5903"},
         {"@id": "https://orcid.org/0000-0003-2580-979X"},
@@ -346,7 +347,6 @@
       "name": "Test Set Predictions (CSV)",
       "description": "The file contains the one-hot encoded feature columns, the actual severity class, and the predicted severity class.",
       "encodingFormat": "text/csv",
-      "identifier": "TODO",
       "author": [
         {"@id": "https://orcid.org/0000-0003-2580-979X"},
         {"@id": "https://orcid.org/0009-0004-8744-9106"}
@@ -409,6 +409,45 @@
       "name": "RO-Crate Validation Output",
       "description": "Terminal output of ro-crate-validator run against this package.",
       "encodingFormat": "text/plain"
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "https://doi.org/10.70124/cmx24-bwv40",
+      "name": "Generated Output Data – Accident Severity Prediction (TUWRD Deposit)",
+      "description": "TUWRD deposit (T3.10) containing all generated outputs: test set predictions, confusion matrix, age distribution histogram, and feature importance chart.",
+      "identifier": "10.70124/cmx24-bwv40",
+      "license": {"@id": "https://creativecommons.org/licenses/by/4.0/"},
+      "author": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "hasPart": [
+        {"@id": "outputs/test_predictions_29052026.csv"},
+        {"@id": "outputs/histogram_feature_dist_29052026.png"},
+        {"@id": "outputs/confusion_matrix_29052026.png"},
+        {"@id": "outputs/performance_comparison_chart_29052026.png"}
+      ]
+    },
+
+    {
+      "@type": ["Dataset", "SoftwareApplication"],
+      "@id": "https://doi.org/10.70124/thw4c-36p53",
+      "name": "Trained ML Model – Accident Severity Prediction (TUWRD Deposit)",
+      "description": "TUWRD deposit (T3.9) containing the trained Random Forest model artefact and FAIR4ML metadata.",
+      "identifier": "10.70124/thw4c-36p53",
+      "license": {"@id": "https://creativecommons.org/licenses/by/4.0/"},
+      "author": [
+        {"@id": "https://orcid.org/0009-0001-7256-5903"},
+        {"@id": "https://orcid.org/0000-0003-2580-979X"},
+        {"@id": "https://orcid.org/0009-0004-8744-9106"},
+        {"@id": "https://orcid.org/0009-0009-4474-1576"}
+      ],
+      "hasPart": [
+        {"@id": "outputs/accident_severity_model_29052026.joblib"}
+      ]
     }
 
   ]
