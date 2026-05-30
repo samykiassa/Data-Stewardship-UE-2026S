@@ -1,0 +1,58 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Prediction of Accident Severity Using Road Traffic Accident Data",
+  "description": "Machine learning project for predicting accident severity using road traffic accident datasets.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "programmingLanguage": "Python",
+  "runtimePlatform": "Python 3.12",
+  "codeRepository": "https://github.com/samykiassa/Data-Stewardship-UE-2026S",
+  "author": [
+     {
+  "@type": "Person",
+  "name": "Adigun Oladapo Oludele",
+  "identifier":"https://orcid.org/0009-0001-7256-5903",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "TU Wien"
+  }
+},
+{
+  "@type": "Person",
+  "name": "Kiassa Samy",
+  "identifier":"https://orcid.org/0000-0003-2580-979X",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "TU Wien"
+  }
+},
+    {
+  "@type": "Person",
+  "name": "Sodhi Muskan",
+  "identifier": "https://orcid.org/0009-0004-8744-9106",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "TU Wien"
+  }
+},
+     {
+  "@type": "Person",
+  "name": "Katoch Nea",
+  "identifier":"https://orcid.org/0009-0009-4474-1576",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "TU Wien"
+  }
+}
+  ],
+  "softwareRequirements": [
+    "joblib==1.4.2",
+    "numpy==1.26.4",
+    "pandas==2.2.2",
+    "matplotlib==3.8.4",
+    "seaborn==0.13.2",
+    "requests==2.31.0",
+    "scikit-learn==1.4.2"
+  ]
+}
