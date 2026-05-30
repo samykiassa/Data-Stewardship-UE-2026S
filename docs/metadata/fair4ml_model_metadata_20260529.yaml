@@ -1,0 +1,56 @@
+model:
+  training_dataset:
+    name: Traffic accident normalized DBRepo dataset
+    source: DBRepo REST API
+    base_url: https://test.dbrepo.tuwien.ac.at/api/v1
+    database_id: b23492bd-f66d-4663-a1f5-f296767dbbdc
+    doi: 10.82556/7fh1-gm97
+    doi_url: https://handle.test.datacite.org/10.82556/7fh1-gm97
+
+  algorithm:
+    name: RandomForestClassifier
+    implementation_version: '1.4.0'
+
+  hyperparameters:
+    n_estimators: 50
+    criterion: gini
+    max_depth: null
+    min_samples_split: 2
+    min_samples_leaf: 1
+    min_weight_fraction_leaf: 0.0
+    max_features: sqrt
+    max_leaf_nodes: null
+    min_impurity_decrease: 0.0
+    bootstrap: true
+    oob_score: false
+    n_jobs: null
+    random_state: 42
+    verbose: 0
+    warm_start: false
+    class_weight: balanced
+    ccp_alpha: 0.0
+    max_samples: null
+    monotonic_cst: null
+
+  evaluation:
+    validation:
+      metrics:
+        accuracy: 0.6836
+    test:
+      metrics:
+        accuracy: 0.6861
+        macro_precision: 0.4087
+        macro_recall: 0.5678
+        macro_f1: 0.4287
+        weighted_precision: 0.7979
+        weighted_recall: 0.6861
+        weighted_f1: 0.7299
+
+  intended_use:
+    primary_purpose: Educational/research demonstration of machine-learning pipeline for predicting traffic accident casualty severity.
+
+
+  known_limitations:
+    - Relies on limited contextual features (weather, lighting, road condition, age, sex, vehicle type).
+    - Class imbalance correction using balanced weights requires closer look via class-specific metrics.
+    - Single-seed holdout evaluation (random_state=42) does not show out-of-sample robustness across folds.
