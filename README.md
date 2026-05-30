@@ -1,5 +1,7 @@
 # Predicting Road Traffic Accident Severity: An Analysis of Environmental Factors and Spurious Correlations
-[![DOI](https://img.shields.io/badge/DOI-10.82556%2F7fh1--gm97-blue)](https://doi.org/10.82556/7fh1-gm97)
+[![Zenodo DOI](https://zenodo.org/badge/1227412997.svg)](https://doi.org/10.5281/zenodo.20463919)
+[![Dataset DOI](https://img.shields.io/badge/Dataset_DOI-10.82556%2F7fh1--gm97-blue)](https://doi.org/10.82556/7fh1-gm97)
+
 ## Abstract
 
 This project investigates the prediction of road traffic accident severity using machine learning methods and structured accident-related data. The experiment focuses on environmental, contextual, and accident-specific attributes to analyse which factors contribute to casualty severity and whether some observed correlations may be spurious or misleading.
