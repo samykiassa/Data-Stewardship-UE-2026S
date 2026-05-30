@@ -35,7 +35,8 @@ and stored at `outputs/accident_severity_model.joblib`.
 
 - **Developed by:** Adigun Oladapo Oludele ([0009-0001-7256-5903](https://orcid.org/0009-0001-7256-5903)), Kiassa
   Samy ([0000-0003-2580-979X](https://orcid.org/0000-0003-2580-979X)), Sodhi
-  Muskan ([0009-0004-8744-9106](https://orcid.org/0009-0004-8744-9106)), Katoch Nea ([0009-0009-4474-1576](https://orcid.org/0009-0009-4474-1576))
+  Muskan ([0009-0004-8744-9106](https://orcid.org/0009-0004-8744-9106)), Katoch
+  Nea ([0009-0009-4474-1576](https://orcid.org/0009-0009-4474-1576))
 - **Model type:** Random Forest Classifier (tabular, supervised)
 - **Language(s):** en
 - **License:** MIT
@@ -79,10 +80,10 @@ could lead to unfair treatment of individuals or groups should be avoided.
 
 ## Licence
 
-The model and all associated code are released under the MIT Licence. The underlying training dataset is published under
-the Open Government Licence v3.0 (OGL v3.0), which permits free use and redistribution as long as the source is
-acknowledged. The MIT Licence is compatible with the OGL v3.0, so no additional restrictions apply to the use or
-redistribution of this model.
+The trained model artefact and generated outputs are released under the Creative Commons Attribution 4.0 International (
+CC BY 4.0) licence. The project source code is released separately under the MIT Licence. The underlying training
+dataset is published under the Open Government Licence v3.0 (OGL v3.0), which permits reuse and redistribution as long
+as the original source, Leeds City Council, is acknowledged.
 
 ## Training Details
 
