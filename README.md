@@ -1,4 +1,5 @@
 # Predicting Road Traffic Accident Severity: An Analysis of Environmental Factors and Spurious Correlations
+
 [![Zenodo DOI](https://zenodo.org/badge/1227412997.svg)](https://doi.org/10.5281/zenodo.20463919)
 [![Dataset DOI](https://img.shields.io/badge/Dataset_DOI-10.82556%2F7fh1--gm97-blue)](https://doi.org/10.82556/7fh1-gm97)
 
