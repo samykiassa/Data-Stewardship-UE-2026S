@@ -1,5 +1,4 @@
 [![DOI](https://img.shields.io/badge/DOI-10.82556%2F7fh1--gm97-blue)](https://doi.org/10.82556/7fh1-gm97)
-**DOI:** [10.82556/7fh1-gm97](https://doi.org/10.82556/7fh1-gm97)
 # Predicting Road Traffic Accident Severity: An Analysis of Environmental Factors and Spurious Correlations
 
 ## File Organization
