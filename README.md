@@ -201,3 +201,30 @@ The metadata is available in [`ro-crate-metadata.json`](ro-crate-metadata.json).
 Validation output is available under [`docs/validation/ro-crate-validation.txt`](docs/validation/ro-crate-validation.txt).
 
 RO-crate compatibility tested via the following command: rocrate-validator validate . > docs\validation\ro-crate-validation.txt
+
+## Input Data Licence
+
+The road traffic accident dataset used in this project was obtained from the European Open Data Portal published by Leeds City Council.
+
+Dataset source:
+https://data.europa.eu/data/datasets/road-traffic-accidents?locale=en
+
+The dataset is distributed under the Open Government Licence (OGL) v3.0.This license permits reuse, redistribution, and modification of the data, provided that appropiate attribution is maintained.
+
+This licence allows the dataset to be used for research and machine learning purposes within this project.The required attribution to Leeds City Council and the original dataset source is maintained in the README, metadata files, and repository documentation.
+
+
+## Software Licence
+
+The software and source code developed for this project are licensed under the MIT License.
+
+The MIT License was selected because it is a permissive open-source licence that allows reuse, modification, distribution, and academic collaboration with minimal restrictions.
+
+The licence is compatible with the source dataset licence and supports reproducible scientific research.
+
+## Output Data Licence
+
+All generated artefacts produced during this project, including trained machine learning models, processed datasets, figures, and prediction outputs, are distributed under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence.
+
+This licence permits reuse and redistribution provided appropriate attribution is given to the project authors.
+
