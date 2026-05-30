@@ -54,3 +54,7 @@ model:
     - Relies on limited contextual features (weather, lighting, road condition, age, sex, vehicle type).
     - Class imbalance correction using balanced weights requires closer look via class-specific metrics.
     - Single-seed holdout evaluation (random_state=42) does not show out-of-sample robustness across folds.
+
+  model_card:
+    path: docs/metadata/model_card_20260529.md
+    url: https://github.com/e12436439/Data-Stewardship-UE-2026S/blob/main/docs/metadata/model_card_20260529.md
